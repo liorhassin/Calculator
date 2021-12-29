@@ -69,10 +69,11 @@ body{
     width:8rem;
     height:5rem;
     border-radius:1rem;
-    border:0;
+    border: none;
     margin:1.1rem;
     margin-top:1.3rem;
     cursor:pointer;
+    box-shadow: 0 0.5rem #999;
     
 }
 
@@ -83,7 +84,7 @@ body{
     width:18rem;
     height:5rem;
     border-radius:1rem;
-    border:0;
+    border: none;
     margin:0.4rem;
     margin-top:1.2rem;
     margin-left:2.2rem;
@@ -93,13 +94,45 @@ body{
 
 .buttonBlue{
     background-color:hsl(225, 21%, 49%);
+    box-shadow: 0 0.5rem hsl(224, 28%, 35%);
 }
 
 .buttonRed{
     background-color:hsl(6, 63%, 50%);
+    box-shadow: 0 0.5rem hsl(6, 70%, 34%);
     
 }
 
 .buttonTextWhite{
     color:white;
+}
+
+.buttonStandard:hover{
+    background-color: hsl(0, 0%, 83%);
+}
+
+.buttonStandard:active {
+    background-color: hsl(0, 0%, 70%);
+    box-shadow: 0 5px #555;
+    transform: translateY(0.6rem);
+}
+
+.buttonSpecialRed:hover{
+    background-color: hsl(6, 63%, 45%);
+}
+
+.buttonSpecialRed:active {
+    background-color: hsl(6, 63%, 40%);
+    box-shadow: 0 5px hsl(6, 70%, 30%);
+    transform: translateY(0.6rem);
+}
+
+.buttonSpecialBlue:hover{
+    background-color: hsl(225, 21%, 42%);
+}
+
+.buttonSpecialBlue:active {
+    background-color: hsl(224, 28%, 32%);
+    box-shadow: 0 5px hsl(224, 28%, 25%);
+    transform: translateY(0.6rem);
 }
