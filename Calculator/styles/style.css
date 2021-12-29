@@ -1,0 +1,36 @@
+html{
+    font-size:62.5%;
+}
+body{
+    background-color: hsl(222, 26%, 31%);
+    color:white;
+}
+.calculator{
+    display:flex;
+    position:relative;
+    width:40vw;
+    height: 70vh;
+    left:40rem;
+    top:16rem;
+    background: hsl(222, 26%, 39%);
+}
+.topElements{
+    display:flex;
+    align-items:center;
+    width:100vw;
+    height:6vh;
+    background-color:black;
+}
+#topLeftTitle{
+    font-size:3rem;
+    flex-basis:47rem;
+}
+#topRightButtonTitle{
+    font-size:1.2rem;
+    flex-basis:6rem;
+
+}
+.topRightToggleBox{
+    font-size:1;
+    flex-basis:8rem;
+}
