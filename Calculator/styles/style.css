@@ -39,12 +39,29 @@ body{
     flex-basis:8rem;
 }
 .previewScreen{
-    display:flex;
     width:100%;
     margin-top:1rem;
     height:12vh;
     border-radius:1rem;
     background-color:hsl(224, 36%, 15%);
+}
+.mainScreen{
+    height:60%;
+    margin-top:1.3rem;
+}
+
+#presentation{
+    padding-top:1rem;
+    padding-left:1rem;
+    width:28.2vw;
+    height:75%;
+    font-size:4rem;
+    font-family:"Spartan";
+    font-weight:bold;
+    margin-top:1.5rem;
+    color:white;
+    background-color:hsl(224, 36%, 15%);
+    border:0;
 }
 .calculatorBody{
     display:flex;
@@ -74,6 +91,7 @@ body{
     margin-top:1.3rem;
     cursor:pointer;
     box-shadow: 0 0.5rem #999;
+    padding:1.7rem;
     
 }
 
@@ -90,6 +108,7 @@ body{
     margin-left:2.2rem;
     color:white;
     cursor:pointer;
+    padding:1.8rem;
 }
 
 .buttonBlue{
