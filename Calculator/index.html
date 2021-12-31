@@ -3,6 +3,7 @@
 <head>
   <title>Frontend Mentor | Calculator app</title>
   <link rel="stylesheet" href="./styles/style.css">
+  <script type="text/javascript" src="./scripts/script.js"></script>
 </head>
 <body>
   <main class="calculator">
@@ -10,15 +11,45 @@
       <h2 id="topLeftTitle">Calc</h2>
       <h3 id="topRightButtonTitle">THEME</h3>
       <div class="topRightToggleBox">
-        <button>toggle</button>
+        <h3>toggle button</h3> <!-- To be implemented with functionality-->
       </div>
     </section>
-    <section class = "previewScreen">
-
-    </section>
+    <div class = "previewScreen">
+      <form class = "mainScreen" name="calcScreen">
+      <input type = "text" name = "text" readonly id = "presentation">
+      </form>
+      <div class="answer" id="answerDisplay">
+        <span class="answerDisplay" id = "answerText"></span>
+      </div>
+    </div>
     <section class="calculatorBody">
-      <div class= "buttons">
-
+      <div class= "buttonsOne">
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='7'">7</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='8'">8</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='9'">9</button>
+        <button class="buttonDesign buttonBlue buttonTextWhite buttonSpecialBlue" onclick="removeLast()">DEL</button>
+      </div>
+      <div class= "buttonsOne">
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='4'">4</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='5'">5</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='6'">6</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='+'">+</button>
+      </div>
+      <div class= "buttonsOne">
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='1'">1</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='2'">2</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='3'">3</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='-'">-</button>
+      </div>
+      <div class= "buttonsOne">
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='.'">.</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='0'">0</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='/'">/</button>
+        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='*'">X</button>
+      </div>
+      <div class= "buttonsTwo">
+        <button class="buttonDesignSpecial buttonBlue buttonSpecialBlue" onclick="reset()">RESET</button>
+        <button class="buttonDesignSpecial buttonRed buttonSpecialRed" onclick ="CalculateString()">=</button>
       </div>
     </section>
   </main>
