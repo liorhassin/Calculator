@@ -16,8 +16,11 @@
     </section>
     <div class = "previewScreen">
       <form class = "mainScreen" name="calcScreen">
-      <input type="text" name="text" readonly id="presentation">
+      <input type = "text" name = "text" readonly id = "presentation">
       </form>
+      <div class="answer" id="answerDisplay">
+        <span class="answerDisplay" id = "answerText"></span>
+      </div>
     </div>
     <section class="calculatorBody">
       <div class= "buttonsOne">
@@ -45,8 +48,8 @@
         <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='*'">X</button>
       </div>
       <div class= "buttonsTwo">
-        <button class="buttonDesignSpecial buttonBlue buttonSpecialBlue" onclick="document.calcScreen.text.value=''">RESET</button>
-        <button class="buttonDesignSpecial buttonRed buttonSpecialRed" onclick ="CalculateString">=</button>
+        <button class="buttonDesignSpecial buttonBlue buttonSpecialBlue" onclick="reset()">RESET</button>
+        <button class="buttonDesignSpecial buttonRed buttonSpecialRed" onclick ="CalculateString()">=</button>
       </div>
     </section>
   </main>
