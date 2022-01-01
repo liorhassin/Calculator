@@ -39,61 +39,54 @@ function CalculateString(){
     let inputString = document.getElementById('presentation').value;
     const multDiv = ["*", "/"];
     let temp = "";
-    switch(inputString){
-        case "":
-            document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = "Empty string nothing to calculate!";
-        default:
-            stackArr = validateString(inputString);
-            if (stackArr === 0){
-                document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = "Invalid input error!";
-                document.getElementById('presentation').value = "";
-                return 0;
-            }
-            // Calculate mult and divide first.
-            for (let i=1; i<stackArr.length-1; i++){
-                if (stackArr[i] === "*"){
-                    temp = Number(stackArr[i-1]) * Number(stackArr[i+1]);
-                    stackArr.splice(i+1, 1);
-                    stackArr.splice(i, 1);
-                    stackArr.splice(i-1, 1,String(temp));
-                    i = 0;
-                        
-                }
-                else if (stackArr[i] === "/"){
-                    temp = Number(stackArr[i-1]) / Number(stackArr[i+1]);
-                    stackArr.splice(i+1, 1);
-                    stackArr.splice(i, 1);
-                    stackArr.splice(i-1, 1,String(temp));
-                    i = 0;
-                }
-            }
-            for (let i=1; i<stackArr.length-1; i++){
-                if (stackArr[i] === "+"){
-                    temp = Number(stackArr[i-1]) + Number(stackArr[i+1]);
-                    stackArr.splice(i+1, 1);
-                    stackArr.splice(i, 1);
-                    stackArr.splice(i-1, 1,String(temp));
-                    i = 0;
-                }
-                else if (stackArr[i] === "-"){
-                    temp = Number(stackArr[i-1]) - Number(stackArr[i+1]);
-                    stackArr.splice(i+1, 1);
-                    stackArr.splice(i, 1);
-                    stackArr.splice(i-1, 1,String(temp));
-                    i = 0;
-                }
-            }
-            document.getElementById('presentation').value = "";
-            if (stackArr[0] === "Infinity" || stackArr[0] === "-Infinity"){
-                document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = "Error division with zero!";
-            }
-            else{
-                document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = stackArr[0];
-            }
-            return;
+    stackArr = validateString(inputString);
+    if (stackArr === 0){
+        document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = "Invalid input error!";
+        document.getElementById('presentation').value = "";
+        return 0;
     }
-
-}
+    // Calculate mult and divide first.
+    for (let i=1; i<stackArr.length-1; i++){
+        if (stackArr[i] === "*"){
+            temp = Number(stackArr[i-1]) * Number(stackArr[i+1]);
+            stackArr.splice(i+1, 1);
+            stackArr.splice(i, 1);
+            stackArr.splice(i-1, 1,String(temp));
+            i = 0;
+                        
+        }
+        else if (stackArr[i] === "/"){
+            temp = Number(stackArr[i-1]) / Number(stackArr[i+1]);
+            stackArr.splice(i+1, 1);
+            stackArr.splice(i, 1);
+            stackArr.splice(i-1, 1,String(temp));
+            i = 0;
+            }
+        }
+        for (let i=1; i<stackArr.length-1; i++){
+            if (stackArr[i] === "+"){
+                temp = Number(stackArr[i-1]) + Number(stackArr[i+1]);
+                stackArr.splice(i+1, 1);
+                stackArr.splice(i, 1);
+                stackArr.splice(i-1, 1,String(temp));
+                i = 0;
+            }
+            else if (stackArr[i] === "-"){
+                temp = Number(stackArr[i-1]) - Number(stackArr[i+1]);
+                stackArr.splice(i+1, 1);
+                stackArr.splice(i, 1);
+                stackArr.splice(i-1, 1,String(temp));
+                i = 0;
+            }
+        }
+        document.getElementById('presentation').value = "";
+        if (stackArr[0] === "Infinity" || stackArr[0] === "-Infinity"){
+            document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = "Error division with zero!";
+        }
+        else{
+            document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = stackArr[0];
+        }
+    }
 
 function swapTheme(buttonNum){
     switch(buttonNum){
