@@ -4,41 +4,49 @@
 html{
     font-size:62.5%;
 }
+
 body{
     background-color: hsl(222, 26%, 31%);
     font-family:"Spartan";
     color:white;
 }
+
 .calculator{
     display:flex;
     position:relative;
     flex-direction:column;
-    width:29vw;
-    height: 62vh;
+    width:40rem;
+    height: 60rem;
     left:33%;
     top:16rem;
     border-radius:1rem;
     user-select: none;
 }
+
 .topElements{
     display:flex;
     align-items:center;
     width:43rem;
-    height:6vh;
+    height:4rem;
 }
+
 #topLeftTitle{
     font-size:2.5rem;
     flex-basis:47rem;
 }
+
 #topRightButtonTitle{
     font-size:1rem;
     flex-basis:7rem;
 
 }
+
 .topRightToggleBox{
+    display:flex;
     font-size:1;
     flex-basis:8rem;
 }
+
 .previewScreen{
     width:43rem;
     margin-top:1rem;
@@ -47,6 +55,7 @@ body{
     background-color:hsl(224, 36%, 15%);
     pointer-events:none;
 }
+
 .mainScreen{
     height:60%;
     margin-top:0.5rem;
@@ -61,7 +70,7 @@ body{
     font-weight:bold;
     margin-top:1.5rem;
     color:white;
-    background-color:hsl(224, 36%, 15%);
+    background-color:transparent;
     border:0;
 }
 
@@ -170,3 +179,194 @@ body{
     box-shadow: 0 5px hsl(224, 28%, 25%);
     transform: translateY(0.6rem);
 }
+
+.topRightToggleBox{
+    display:flex;
+    position:relative;
+    flex-direction:column;
+    top:-1.2rem;
+}
+.topButtons{
+    display:flex;
+}
+
+.themeButton{
+    font-family:"Spartan";
+    font-size:1.2rem;
+    color:white;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+}
+
+.backOfSlider{
+    margin-top:0.3rem;
+    background-color:hsl(223, 31%, 20%);
+    border-radius:1rem;
+    width:5.7rem;
+    height:2rem;
+}
+
+.sliderDot{
+    display:flex;
+    position:relative;
+    background-color:hsl(6, 63%, 50%);
+    top:0.31rem;
+    left:0.4rem;
+    border-radius:1rem;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+
+/* Theme change section */
+
+body.theme2{
+    background-color:hsl(0, 0%, 90%);
+}
+
+body.theme3{
+    background-color:hsl(268, 75%, 9%);
+}
+
+.calculatorBody.theme2{
+    background-color:hsl(0, 5%, 81%);
+}
+
+.calculatorBody.theme3{
+    background-color:hsl(268, 71%, 12%);
+}
+
+#dot.theme2{
+    left:2.1rem;
+}
+
+#dot.theme3{
+    left:4rem;
+}
+
+.previewScreen.theme2{
+    background-color:hsl(0, 0%, 93%);
+}
+
+.previewScreen.theme3{
+    background-color:hsl(268, 71%, 12%);
+}
+
+.calculatorBody.theme2{
+    background-color:hsl(0, 5%, 81%);
+}
+
+.calculatorBody.theme3{
+    background-color:hsl(268, 71%, 12%);
+}
+
+.buttonStandard.theme2{
+    box-shadow: 0 0.5rem hsl(35, 11%, 61%);
+    background-color:hsl(45, 7%, 89%);
+    color:hsl(60, 10%, 19%);
+}
+
+.buttonStandard.theme3{
+    box-shadow: 0 0.5rem hsl(290, 70%, 36%);
+    background-color:hsl(268, 47%, 21%);
+    color:hsl(52, 100%, 62%);
+}
+
+.buttonBlue.theme2{
+    box-shadow: 0 0.5rem  hsl(185, 58%, 25%);
+    background-color:hsl(185, 42%, 37%);
+    color:hsl(0, 0, 100%);
+}
+
+.buttonBlue.theme3{
+    box-shadow: 0 0.5rem hsl(285, 91%, 52%);
+    background-color:hsl(281, 89%, 26%);
+    color:hsl(0, 0, 100%);
+}
+
+.buttonRed.theme2{
+    box-shadow: 0 0.5rem hsl(25, 99%, 27%);
+    background-color:hsl(25, 98%, 40%);
+    color:hsl(0, 0, 100%);
+}
+
+.buttonRed.theme3{
+    box-shadow: 0 0.5rem hsl(177, 92%, 70%);
+    background-color:hsl(176, 100%, 44%);
+    color:hsl(198, 20%, 13%);
+}
+
+#topLeftTitle.theme2{
+    color:hsl(60, 10%, 19%);
+}
+
+#topLeftTitle.theme3{
+    color:hsl(52, 100%, 62%);
+}
+
+#topRightButtonTitle.theme2{
+    color:hsl(60, 10%, 19%);
+}
+
+#topRightButtonTitle.theme3{
+    color:hsl(52, 100%, 62%);
+}
+
+#one.theme2{
+    color:hsl(60, 10%, 19%);
+}
+
+#one.theme3{
+    color:hsl(52, 100%, 62%);
+}   
+
+#two.theme2{
+    color:hsl(60, 10%, 19%);
+}
+
+#two.theme3{
+    color:hsl(52, 100%, 62%);
+}
+
+#three.theme2{
+    color:hsl(60, 10%, 19%);
+}
+
+#three.theme3{
+    color:hsl(52, 100%, 62%);
+}
+
+#presentation.theme2{
+    color:hsl(60, 10%, 19%);
+}
+
+#presentation.theme3{
+    color:hsl(52, 100%, 62%);
+}
+
+.answerDisplay.theme2{
+    color:hsl(60, 10%, 19%);
+}
+
+.answerDisplay.theme3{
+    color:hsl(52, 100%, 62%);
+}
+
+#backOfSlider.theme2{
+    background-color:hsl(0, 5%, 81%);
+}
+
+#backOfSlider.theme3{
+    background-color:hsl(268, 71%, 12%);
+}
+
+#dot.theme2{
+    background-color:hsl(25, 98%, 40%);
+}
+
+#dot.theme3{
+    background-color:hsl(176, 100%, 44%);
+}
+

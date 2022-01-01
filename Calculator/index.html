@@ -11,10 +11,17 @@
       <h2 id="topLeftTitle">Calc</h2>
       <h3 id="topRightButtonTitle">THEME</h3>
       <div class="topRightToggleBox">
-        <h3>toggle button</h3> <!-- To be implemented with functionality-->
+        <div class="topButtons">
+          <button class="themeButton" id="one" onclick="swapTheme('One')">1</button>
+          <button class="themeButton" id="two" onclick="swapTheme('Two')">2</button>
+          <button class="themeButton" id="three" onclick="swapTheme('Three')">3</button>
+        </div>
+        <div class="backOfSlider" id="backOfSlider">
+          <div class="sliderDot" id = "dot"></div>
+        </div>
       </div>
     </section>
-    <div class = "previewScreen">
+    <div class = "previewScreen" id = "calcScreen">
       <form class = "mainScreen" name="calcScreen">
       <input type = "text" name = "text" readonly id = "presentation">
       </form>
@@ -22,34 +29,34 @@
         <span class="answerDisplay" id = "answerText"></span>
       </div>
     </div>
-    <section class="calculatorBody">
+    <section class="calculatorBody" id="calcBody">
       <div class= "buttonsOne">
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='7'">7</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='8'">8</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='9'">9</button>
-        <button class="buttonDesign buttonBlue buttonTextWhite buttonSpecialBlue" onclick="removeLast()">DEL</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard0" onclick="document.calcScreen.text.value+='7'">7</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard1" onclick="document.calcScreen.text.value+='8'">8</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard2" onclick="document.calcScreen.text.value+='9'">9</button>
+        <button class="buttonDesign buttonBlue buttonTextWhite buttonSpecialBlue" id = "buttonSpecial0" onclick="removeLast()">DEL</button>
       </div>
       <div class= "buttonsOne">
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='4'">4</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='5'">5</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='6'">6</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='+'">+</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard3" onclick="document.calcScreen.text.value+='4'">4</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard4" onclick="document.calcScreen.text.value+='5'">5</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard5" onclick="document.calcScreen.text.value+='6'">6</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard6" onclick="document.calcScreen.text.value+='+'">+</button>
       </div>
       <div class= "buttonsOne">
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='1'">1</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='2'">2</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='3'">3</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='-'">-</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard7" onclick="document.calcScreen.text.value+='1'">1</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard8" onclick="document.calcScreen.text.value+='2'">2</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard9" onclick="document.calcScreen.text.value+='3'">3</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard10" onclick="document.calcScreen.text.value+='-'">-</button>
       </div>
       <div class= "buttonsOne">
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='.'">.</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='0'">0</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='/'">/</button>
-        <button class="buttonDesign buttonStandard" onclick="document.calcScreen.text.value+='*'">X</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard11" onclick="document.calcScreen.text.value+='.'">.</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard12" onclick="document.calcScreen.text.value+='0'">0</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard13" onclick="document.calcScreen.text.value+='/'">/</button>
+        <button class="buttonDesign buttonStandard" id = "buttonStandard14" onclick="document.calcScreen.text.value+='*'">X</button>
       </div>
       <div class= "buttonsTwo">
-        <button class="buttonDesignSpecial buttonBlue buttonSpecialBlue" onclick="reset()">RESET</button>
-        <button class="buttonDesignSpecial buttonRed buttonSpecialRed" onclick ="CalculateString()">=</button>
+        <button class="buttonDesignSpecial buttonBlue buttonSpecialBlue" id = "buttonSpecial1" onclick="reset()">RESET</button>
+        <button class="buttonDesignSpecial buttonRed buttonSpecialRed" id = "buttonSpecial2" onclick ="CalculateString()">=</button>
       </div>
     </section>
   </main>
