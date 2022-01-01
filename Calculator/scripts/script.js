@@ -41,7 +41,6 @@ function CalculateString(){
     let temp = "";
     switch(inputString){
         case "":
-            document.getElementById('presentation').value = "";
             document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = "Empty string nothing to calculate!";
         default:
             stackArr = validateString(inputString);
@@ -84,15 +83,142 @@ function CalculateString(){
                     i = 0;
                 }
             }
-            if (stackArr[0] !== Infinity){
-                document.getElementById('presentation').value = "";
-                document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = "Error division with zero!"; 
+            document.getElementById('presentation').value = "";
+            if (stackArr[0] === "Infinity" || stackArr[0] === "-Infinity"){
+                document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = "Error division with zero!";
             }
             else{
-                document.getElementById('presentation').value = "";
                 document.getElementById("answerDisplay").getElementsByTagName("span")[0].innerHTML = stackArr[0];
             }
             return;
     }
 
 }
+
+function swapTheme(buttonNum){
+    switch(buttonNum){
+        case "One":
+            let one = document.getElementById('one');
+            one.addEventListener('click', function(){
+                document.querySelector('body').classList.remove('theme2');
+                document.querySelector('body').classList.remove('theme3');
+                document.getElementById('dot').classList.remove('theme2');
+                document.getElementById('dot').classList.remove('theme3');
+                document.getElementById('calcScreen').classList.remove('theme2');
+                document.getElementById('calcScreen').classList.remove('theme3');
+                document.getElementById('calcBody').classList.remove('theme2');
+                document.getElementById('calcBody').classList.remove('theme3');
+                for (i=0; i < 15; i++){
+                    if (i<3){
+                        let temp = 'buttonSpecial' + String(i);
+                        document.getElementById(temp).classList.remove('theme2');
+                        document.getElementById(temp).classList.remove('theme3');
+                    }
+                    let temp = 'buttonStandard' + String(i);
+                    document.getElementById(temp).classList.remove('theme2');
+                    document.getElementById(temp).classList.remove('theme3');
+                }
+                document.getElementById('topLeftTitle').classList.remove('theme3');
+                document.getElementById('topLeftTitle').classList.remove('theme2');
+                document.getElementById('topRightButtonTitle').classList.remove('theme3');
+                document.getElementById('topRightButtonTitle').classList.remove('theme2');
+                document.getElementById('one').classList.remove('theme2');
+                document.getElementById('one').classList.remove('theme3');
+                document.getElementById('two').classList.remove('theme2');
+                document.getElementById('two').classList.remove('theme3');
+                document.getElementById('three').classList.remove('theme2');
+                document.getElementById('three').classList.remove('theme3');
+                document.getElementById('presentation').classList.remove('theme2');
+                document.getElementById('presentation').classList.remove('theme3');
+                document.getElementById('answerText').classList.remove('theme2');
+                document.getElementById('answerText').classList.remove('theme3');
+                document.getElementById('backOfSlider').classList.remove('theme2');
+                document.getElementById('backOfSlider').classList.remove('theme3');
+                document.getElementById('dot').classList.remove('theme2');
+                document.getElementById('dot').classList.remove('theme3');
+
+            })
+        case "Two":
+            let two = document.getElementById('two');
+            two.addEventListener('click', function(){
+                document.querySelector('body').classList.remove('theme3');
+                document.querySelector('body').classList.add('theme2');
+                document.getElementById('dot').classList.remove('theme3');
+                document.getElementById('dot').classList.add('theme2');
+                document.getElementById('calcScreen').classList.remove('theme3');
+                document.getElementById('calcScreen').classList.add('theme2');
+                document.getElementById('calcBody').classList.remove('theme3');
+                document.getElementById('calcBody').classList.add('theme2');
+                for (i=0; i < 15; i++){
+                    if (i<3){
+                        let temp = 'buttonSpecial' + String(i);
+                        document.getElementById(temp).classList.remove('theme3');
+                        document.getElementById(temp).classList.add('theme2');
+                    }
+                    let temp = 'buttonStandard' + String(i);
+                    document.getElementById(temp).classList.remove('theme3');
+                    document.getElementById(temp).classList.add('theme2');
+                }
+                document.getElementById('topLeftTitle').classList.remove('theme3');
+                document.getElementById('topLeftTitle').classList.add('theme2');
+                document.getElementById('topRightButtonTitle').classList.remove('theme3');
+                document.getElementById('topRightButtonTitle').classList.add('theme2');
+                document.getElementById('one').classList.remove('theme3');
+                document.getElementById('one').classList.add('theme2');
+                document.getElementById('two').classList.remove('theme3');
+                document.getElementById('two').classList.add('theme2');
+                document.getElementById('three').classList.remove('theme3');
+                document.getElementById('three').classList.add('theme2');
+                document.getElementById('presentation').classList.remove('theme3');
+                document.getElementById('presentation').classList.add('theme2');
+                document.getElementById('answerText').classList.remove('theme3');
+                document.getElementById('answerText').classList.add('theme2');
+                document.getElementById('backOfSlider').classList.remove('theme3');
+                document.getElementById('backOfSlider').classList.add('theme2');
+                document.getElementById('dot').classList.remove('theme3');
+                document.getElementById('dot').classList.add('theme2');
+            })
+        default:
+            let three = document.getElementById('three');
+            three.addEventListener('click', function(){
+                document.querySelector('body').classList.remove('theme2');
+                document.querySelector('body').classList.add('theme3');
+                document.getElementById('dot').classList.remove('theme2');
+                document.getElementById('dot').classList.add('theme3');
+                document.getElementById('calcScreen').classList.remove('theme2');
+                document.getElementById('calcScreen').classList.add('theme3');
+                document.getElementById('calcBody').classList.remove('theme2');
+                document.getElementById('calcBody').classList.add('theme3');
+                for (i=0; i < 15; i++){
+                    if (i<3){
+                        let temp = 'buttonSpecial' + String(i);
+                        document.getElementById(temp).classList.remove('theme2');
+                        document.getElementById(temp).classList.add('theme3');
+                    }
+                    let temp = 'buttonStandard' + String(i);
+                    document.getElementById(temp).classList.remove('theme2');
+                    document.getElementById(temp).classList.add('theme3');
+                }
+                document.getElementById('topLeftTitle').classList.remove('theme2');
+                document.getElementById('topLeftTitle').classList.add('theme3');
+                document.getElementById('topRightButtonTitle').classList.remove('theme2');
+                document.getElementById('topRightButtonTitle').classList.add('theme3');
+                document.getElementById('one').classList.remove('theme2');
+                document.getElementById('one').classList.add('theme3');
+                document.getElementById('two').classList.remove('theme2');
+                document.getElementById('two').classList.add('theme3');
+                document.getElementById('three').classList.remove('theme2');
+                document.getElementById('three').classList.add('theme3');
+                document.getElementById('presentation').classList.remove('theme2');
+                document.getElementById('presentation').classList.add('theme3');
+                document.getElementById('answerText').classList.remove('theme2');
+                document.getElementById('answerText').classList.add('theme3');
+                document.getElementById('backOfSlider').classList.remove('theme2');
+                document.getElementById('backOfSlider').classList.add('theme3');
+                document.getElementById('dot').classList.remove('theme2');
+                document.getElementById('dot').classList.add('theme3');
+            })
+    }
+}
+
+
